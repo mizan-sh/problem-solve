@@ -9,52 +9,80 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
       <link rel="stylesheet" href="style.css">
-    <title>AHSAN SHOPING  MOHOL</title>
+    <title>JavaScript provlem solve</title>
   </head>
   <body>
 
   
-
-
-
     
     <div class="container bg-success text-center">
-        <h3>Provlem no:1</h3>
-        <p class="text-white">suppose you went to visit the coxbazar.there you grew up in a hotel.if you look at this hotel,you will have to pay 100 tk per day for the first ten days.in the next 10 days you will increase by 80 tk.enter the box below for the how long you stayed at the hotel and see how much money you have raised</p>
-                  
-        <input type="text" placeholder="type your day" id="hotel" class="text-center "><br>
-        
-        <button onclick="hotel()" class="bg-primary"> submit</button>
-     </div><br><b></b>
-        
-        
-        <div class="container bg-info text-center">
-            <h3>Provlem no:2</h3>
+      <h3>Provlem no:1</h3>
+      <p class="text-white">suppose you went to visit the coxbazar.there you grew up in a hotel.if you look at this hotel,you will have to pay 100 tk per day for the first ten days.in the next 10 days you will increase by 80 tk.enter the box below for the how long you stayed at the hotel and see how much money you have raised</p>
+                
+      <input type="text" placeholder="type your day" id="fa" class="text-center "><br>
+      
+      <button onclick="hotel()" class="bg-primary"> submit</button>
+   </div><br><b></b>
+      
+      
+      <div class="container bg-info text-center">
+          <h3>Provlem no:2</h3>
 
-            <p>Enter your name in the box below and find out the number of the name </p>
-         
-                  
-        <input type="text" placeholder="type your name" id="name" class="text-center"><br>
-        
-        <button onclick=" namelength()" class="bg-success">submit</button><br>
-        
-        </div>
-        
+          <p>Enter your name in the box below and find out the number of the name </p>
+       
+                
+      <input type="text" placeholder="type your name" id="name" class="text-center"><br>
+      
+      <button onclick=" namelength()" class="bg-success">submit</button><br>
+      
+      </div>
+      
+
+
+
         
             <script>
-                function hotel() {
-                    var c=document.getElementById("hotel").value;
-                    var result=c     *100;
-                    
-                        document.write(result);
-                        }
-                   
+              function hotel(){
+                var day=document.getElementById('fa').value;
+           
+               
+                if(day<=10){
+                   var cost=day*100 ;
+                   {
+                     document.write(cost);
+                   }
+
+              }
+              else if(day<=20){
+                var first=10*100;
+                var remainday=day-10;
+                var second=remainday*80;
+                var total=first+second;
+               {
+                 document.write(total);
+               }   
+
+              }
+              else{
+                var first=10*100;
+                var second=10*80;
+                var remainday=day-20;
+                var third=remainday*50;
+                var total=first+second+third;
+                {
+                  document.write(total);
+                }
+              
+              }
+             
+              }
+
+
+
+
         
                
               document.write("<br>");
-        
-        
-        
         
         function namelength(){
             var data=document.getElementById("name").value;
